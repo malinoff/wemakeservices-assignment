@@ -1,0 +1,8 @@
+.idea
+.env
+.git
+.gitignore
+.python-version
+docker-compose.yml
+Dockerfile
+heroku.yml
