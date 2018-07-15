@@ -51,9 +51,15 @@ def github():
     </div>
     '''
     repos = '\n'.join([
-        f"<div><a href=\"{repo['html_url']}\">{repo['name']}</a></div>"
+        f"<li><a href=\"{repo['html_url']}\">{repo['name']}</a></li>"
         for repo in _get_github('user/repos', access_token)
     ])
+    repos = f'''
+    Repositories:
+    <ul>
+    {repos}
+    </ul>
+    '''
     return template.format(content=header + repos)
 
 
